@@ -22,3 +22,10 @@ const ask = (i=0) => {
 }
 
 ask()
+//when you enter your answer to the question and hit enter
+// this takes that data and prints it to the terminal
+// and then exits
+process.stdin.on('data', data => {
+  process.stdout.write(`\n\n ${data.toString().trim()} \n\n`)
+  process.exit()
+})
