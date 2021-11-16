@@ -43,3 +43,12 @@ process.stdin.on('data', data => {
     process.exit()
   }
 })
+
+process.on('exit', () => {
+  const [name, activity, lang] = answers
+  console.log(`
+    Thank you for your answers.
+
+    Go ${activity} ${name} you can write ${lang} code later!!!
+  `)
+})
