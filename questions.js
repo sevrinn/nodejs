@@ -30,5 +30,7 @@ ask()
 // this takes that data and prints it to the terminal
 // and then exits
 process.stdin.on('data', data => {
-  answer
+  answers.push(data.toString().trim())
+
+  
 })
