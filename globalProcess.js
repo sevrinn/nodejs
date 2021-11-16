@@ -2,7 +2,7 @@
 // // us interact with that process.
 
 // // while it is available as global, explicitly requiring/importing
-// // is reccomended
+// // is reccommended
 
 // //we can get the process id
 // console.log(process.pid)
