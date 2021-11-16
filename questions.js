@@ -27,10 +27,19 @@ const ask = (i=0) => {
 ask()
 
 //when you enter your answer to the question and hit enter
-// this takes that data and prints it to the terminal
-// and then exits
+
 process.stdin.on('data', data => {
+  //your answer is pushed to the answers array
   answers.push(data.toString().trim())
 
+  // if length of answers arr is less than length of questions arr
+  if (answers.length < questions.length) {
+    //ask the next question
+    ask(answers.length)
   
+  //and if that aint the case
+  } else {
+    //GTFO
+    process.exit()
+  }
 })
