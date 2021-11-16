@@ -14,6 +14,9 @@ const questions = [
   "What is your preferred programming language?"
 ]
 
+//declare answers array
+const answers = []
+
 //ask function takes a parameter and if no argument is given
 //it will start at the first index of the array
 const ask = (i=0) => {
@@ -22,10 +25,10 @@ const ask = (i=0) => {
 }
 
 ask()
+
 //when you enter your answer to the question and hit enter
 // this takes that data and prints it to the terminal
 // and then exits
 process.stdin.on('data', data => {
-  process.stdout.write(`\n\n ${data.toString().trim()} \n\n`)
-  process.exit()
+  answer
 })
