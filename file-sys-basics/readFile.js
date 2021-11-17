@@ -5,7 +5,7 @@ const fs = require("fs")
 // const text = fs.readFileSync("./assets/Readme.md", "UTF-8")
 
 // readFile asynchronously reads the entirety of a file
-fs.readFile("./assets/Readme.md", "UTF-8", (err, text) => {
+fs.readFile("./assets/notes.md", "UTF-8", (err, text) => {
   if(err){
     console.log("There was an error reading the contents of the file")
   }
