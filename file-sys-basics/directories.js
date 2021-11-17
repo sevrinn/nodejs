@@ -4,7 +4,7 @@ const fs = require("fs")
 //renames a file, takes 2 args
   //1 name of dir to change
   //2 new name 
-fs.renameSync("./storage-files", "./storage")
+fs.renameSync("./storage", "./storage-files")
 
 
 //CREATE TEMP DIR
@@ -27,8 +27,11 @@ if (fs.existsSync("temp")) {
 //waits 4 seconds, deletes temp
 setTimeout(() => {
   fs.rmdir("./temp", err => {
-    console.log("error deleting dir")
-    throw err
+    if(err) {
+      console.log("error deleting dir")
+      throw err
+    }
+    console.log("Directory deleted successfully")
   })
-  console.log("Directory deleted successfully")
+  
 }, 4000)
