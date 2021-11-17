@@ -9,8 +9,9 @@ const rl = readline.createInterface({
 
 
  //collectAnswers takes in an array of quesitons and will 
+ // done f arrow f makes it optional
  
-module.exports = (questions, done) => {
+module.exports = (questions, done = f => f) => {
   //create answers array
   const answers = []
   //destructure firstQuestion from question
