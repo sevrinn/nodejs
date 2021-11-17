@@ -17,7 +17,8 @@ module.exports = (questions, done = f => f) => {
   const answers = []
   //destructure firstQuestion from question
   const [firstQuestion] = questions
-
+  //create instance of EventEmitter
+  const emitter = new EventEmitter()
   //runs after first question is asked, taking given answer as arg
   const questionAnswered = answer => {
     //pushes answer to answers arr
