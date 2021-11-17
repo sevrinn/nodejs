@@ -1,3 +1,7 @@
+//NODE globals
+//Global object contains all the objects, methods, and values that we can 
+//use on a js file without having to import any functionality
+
 const path = require("path")
 
 //prints full path to directory name of current module
