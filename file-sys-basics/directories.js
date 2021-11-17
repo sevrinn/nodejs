@@ -23,8 +23,12 @@ if (fs.existsSync("temp")) {
   })
 }
 
-// //DELETE DIR
-// //waits 4 seconds, deletes temp
-// setTimeout(() => {
-//   fs.rmdir("./")
-// }, 4000)
+//DELETE DIR
+//waits 4 seconds, deletes temp
+setTimeout(() => {
+  fs.rmdir("./temp", err => {
+    console.log("error deleting dir")
+    throw err
+  })
+  console.log("Directory deleted successfully")
+}, 4000)
