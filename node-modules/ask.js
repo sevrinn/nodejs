@@ -25,5 +25,5 @@ rl.question("How do you like Node? ", answer => {
  * arg
  * 
  * line 9: consoles a string with your answer passed in as a template literal
- * line 10: exit out of the process.
+ * line 10: exit out of the process
  */
