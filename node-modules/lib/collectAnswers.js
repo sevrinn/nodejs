@@ -1,4 +1,5 @@
 const readline = require("readline")
+const { EventEmitter } = require("events")
 
 //creates interface and sets input/output
 const rl = readline.createInterface({
