@@ -6,11 +6,16 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
-
+//creates a list of questions
+const questions = [
+  "What is your name?",
+  "Where do you live?",
+  "What are you going to do with node js?"
+];
 
  //collectAnswers takes in an array of quesitons and will 
  
-module.exports = (questions, done) => {
+const collectAnswers = (questions, done) => {
   //create answers array
   const answers = []
   //destructure firstQuestion from question
@@ -33,3 +38,8 @@ module.exports = (questions, done) => {
   rl.question(firstQuestion, questionAnswered)
 }
 
+collectAnswers(questions, answers => {
+  console.log("Thank you for your answers")
+  console.log(answers)
+  process.exit()
+})
