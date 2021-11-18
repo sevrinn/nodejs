@@ -1,4 +1,5 @@
 const fs = require("fs")
+const path = require("path")
 
 //RENAME DIR
 //renames a file, takes 2 args
@@ -23,9 +24,20 @@ if (fs.existsSync("temp")) {
   })
 }
 
-//DELETE DIR
+//ADD FILES TO TEMP DIR
+fs.writeFileSync(path.join(__dirname, "temp", "newfile1.js"), "//newfile1.js", "UTF-8")
+fs.writeFileSync(path.join(__dirname, "temp", "newfile2.js"), "//newfile2.js", "UTF-8")
+
+//DELETE TEMP DIR
 //waits 4 seconds, deletes temp
 setTimeout(() => {
+  //returns array of every file name in dir
+  //for each loops through each fileName, removing them 1 by 1 
+  fs.readdirSync("./temp").forEach(fileName => {
+    //removes file
+    fs.unlinkSync(`./temp/${fileName}`)
+  })
+  //when all files are removed, we can remove the directory
   fs.rmdir("./temp", err => {
     if(err) {
       console.log("error deleting dir")
@@ -34,4 +46,4 @@ setTimeout(() => {
     console.log("Directory deleted successfully")
   })
   
-}, 4000)
+}, 6000)
